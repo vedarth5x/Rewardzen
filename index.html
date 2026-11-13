@@ -1,0 +1,1858 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rewardzen — Earn Rewards, Complete Tasks &amp; Withdraw Cash</title>
+    <meta name="description" content="Download Rewardzen APK for Android. Complete simple tasks, high-paying surveys, and refer friends to earn real cash directly to your bank account." />
+    <meta property="og:title" content="Rewardzen — Earn Rewards, Complete Tasks &amp; Withdraw Cash" />
+    <meta property="og:description" content="Download Rewardzen APK for Android. Complete simple tasks, high-paying surveys, and refer friends to earn real cash directly to your bank account." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./logo_cec7fe47.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/jpeg" href="./logo_cec7fe47.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script defer src="./app.js"></script>
+  </head>
+  <body class="bg-slate-50 text-slate-900 antialiased selection:bg-amber-200 selection:text-amber-900">
+    <div class="min-h-screen flex flex-col bg-white text-slate-900 selection:bg-amber-200 selection:text-amber-900">
+
+      <!-- ===================================================================
+           1. FLOATING NAVIGATION BAR (B7) WITH LANGUAGE SWITCHER
+           =================================================================== -->
+      <header class="fixed top-3 inset-x-0 z-40 mx-auto max-w-6xl px-4 sm:px-6">
+        <div class="flex h-14 items-center justify-between gap-4 sm:gap-6 px-4 sm:px-6 rounded-2xl border border-slate-200/80 bg-white/85 backdrop-blur-md shadow-xs transition-smooth">
+          <!-- Brand wordmark -->
+          <a href="#" class="flex items-center gap-2.5 whitespace-nowrap shrink-0 group">
+            <img
+              src="./logo_cec7fe47.jpg"
+              alt="Rewardzen logo"
+              class="h-8 w-8 rounded-lg object-cover ring-1 ring-amber-400/50 shadow-xs group-hover:scale-105 transition-smooth"
+            />
+            <span class="title-2 font-bold text-slate-900 tracking-tight">Rewardzen</span>
+          </a>
+
+          <!-- Clean navigation links -->
+          <nav class="hidden lg:flex items-center gap-5 xl:gap-6 title-4 text-slate-600">
+            <a href="#benefits" data-i18n="nav.benefits" class="hover:text-slate-900 transition-color-smooth whitespace-nowrap">Benefits</a>
+            <a href="#how-it-works" data-i18n="nav.howItWorks" class="hover:text-slate-900 transition-color-smooth whitespace-nowrap">How it works</a>
+            <a href="#showcase" data-i18n="nav.screens" class="hover:text-slate-900 transition-color-smooth whitespace-nowrap">App screens</a>
+            <a href="#calculator" data-i18n="nav.calculator" class="hover:text-slate-900 transition-color-smooth whitespace-nowrap">Calculator</a>
+            <a href="#testimonials" data-i18n="nav.proofs" class="hover:text-slate-900 transition-color-smooth whitespace-nowrap">Payout proofs</a>
+            <a href="#faq" data-i18n="nav.faq" class="hover:text-slate-900 transition-color-smooth whitespace-nowrap">FAQs</a>
+          </nav>
+
+          <!-- Primary actions & Language switcher -->
+          <div class="flex items-center gap-2 sm:gap-2.5 shrink-0">
+            <!-- Desktop Language Switcher -->
+            <div class="relative inline-block text-left" id="lang-switcher-container">
+              <button
+                id="lang-switcher-btn"
+                type="button"
+                class="button-sm flex items-center gap-1.5 py-1.5 px-2.5 rounded-lg border border-slate-200 bg-white text-slate-700 hover:bg-slate-50 hover:text-slate-900 transition-color-smooth shadow-xs active:scale-98"
+                aria-label="Select language"
+                aria-expanded="false"
+              >
+                <svg class="h-3.5 w-3.5 text-slate-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                <span id="lang-code-label" class="caption-3 font-semibold uppercase">en</span>
+                <svg id="lang-chevron" class="h-3 w-3 text-slate-400 transition-smooth" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+              </button>
+
+              <div
+                id="lang-dropdown"
+                class="hidden absolute right-0 mt-1.5 w-36 rounded-xl border border-slate-200 bg-white shadow-lg py-1.5 z-50 animate-in fade-in zoom-in-95 duration-150"
+              >
+                <div class="px-3 py-1 caption-5 uppercase tracking-wider text-slate-400 font-semibold border-b border-slate-100 mb-1">
+                  Language
+                </div>
+                <button type="button" data-lang-option="en" class="w-full flex items-center justify-between px-3 py-1.5 text-left caption-4 transition-color-smooth bg-slate-50 text-slate-900 font-bold">
+                  <div class="flex flex-col">
+                    <span>English</span>
+                    <span class="caption-5 text-slate-400">English</span>
+                  </div>
+                  <svg class="lang-check-icon h-3.5 w-3.5 text-emerald-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                </button>
+                <button type="button" data-lang-option="es" class="w-full flex items-center justify-between px-3 py-1.5 text-left caption-4 transition-color-smooth text-slate-600 hover:bg-slate-50 hover:text-slate-900">
+                  <div class="flex flex-col">
+                    <span>Español</span>
+                    <span class="caption-5 text-slate-400">Spanish</span>
+                  </div>
+                  <svg class="lang-check-icon hidden h-3.5 w-3.5 text-emerald-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                </button>
+                <button type="button" data-lang-option="hi" class="w-full flex items-center justify-between px-3 py-1.5 text-left caption-4 transition-color-smooth text-slate-600 hover:bg-slate-50 hover:text-slate-900">
+                  <div class="flex flex-col">
+                    <span>हिन्दी</span>
+                    <span class="caption-5 text-slate-400">Hindi</span>
+                  </div>
+                  <svg class="lang-check-icon hidden h-3.5 w-3.5 text-emerald-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Primary CTA -->
+            <button
+              type="button"
+              data-open-download="download"
+              class="button-sm flex items-center gap-2 rounded-lg bg-slate-900 py-2 px-3 text-white hover:bg-slate-800 transition-color-smooth active:scale-98 whitespace-nowrap shadow-xs"
+            >
+              <svg class="h-4 w-4 text-amber-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+              <span class="hidden sm:inline" data-i18n="nav.downloadApk">Download APK</span>
+              <span class="sm:hidden">APK</span>
+            </button>
+
+            <button
+              id="mobile-menu-toggle"
+              type="button"
+              class="flex lg:hidden p-2 text-slate-600 hover:text-slate-900 rounded-lg transition-color-smooth"
+              aria-label="Toggle navigation menu"
+            >
+              <svg id="mobile-icon-menu" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+              <svg id="mobile-icon-close" class="hidden h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Drawer -->
+        <div id="mobile-drawer" class="hidden lg:hidden mt-2 rounded-2xl border border-slate-200 bg-white/95 backdrop-blur-md p-4 shadow-lg space-y-3">
+          <!-- Mobile Language Switcher Row -->
+          <div class="flex items-center justify-between p-2 rounded-xl bg-slate-50 border border-slate-200">
+            <div class="flex items-center gap-2 caption-3 text-slate-700">
+              <svg class="h-4 w-4 text-slate-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+              <span>Language:</span>
+            </div>
+            <div class="flex items-center gap-1">
+              <button type="button" data-mobile-lang="en" class="button-xsm py-1 px-2.5 rounded-md transition-smooth bg-slate-900 text-white font-semibold shadow-xs">EN</button>
+              <button type="button" data-mobile-lang="es" class="button-xsm py-1 px-2.5 rounded-md transition-smooth text-slate-600 hover:text-slate-900 bg-white border border-slate-200">ES</button>
+              <button type="button" data-mobile-lang="hi" class="button-xsm py-1 px-2.5 rounded-md transition-smooth text-slate-600 hover:text-slate-900 bg-white border border-slate-200">HI</button>
+            </div>
+          </div>
+
+          <div class="flex flex-col space-y-1 text-sm font-medium text-slate-700 pt-1">
+            <a href="#benefits" data-i18n="nav.benefits" class="py-2 px-3 rounded-lg hover:bg-slate-50 transition-color-smooth">Benefits</a>
+            <a href="#how-it-works" data-i18n="nav.howItWorks" class="py-2 px-3 rounded-lg hover:bg-slate-50 transition-color-smooth">How it works</a>
+            <a href="#showcase" data-i18n="nav.screens" class="py-2 px-3 rounded-lg hover:bg-slate-50 transition-color-smooth">App screens</a>
+            <a href="#calculator" data-i18n="nav.calculator" class="py-2 px-3 rounded-lg hover:bg-slate-50 transition-color-smooth">Calculator</a>
+            <a href="#testimonials" data-i18n="nav.proofs" class="py-2 px-3 rounded-lg hover:bg-slate-50 transition-color-smooth">Payout proofs</a>
+            <a href="#faq" data-i18n="nav.faq" class="py-2 px-3 rounded-lg hover:bg-slate-50 transition-color-smooth">FAQs</a>
+          </div>
+
+          <div class="pt-3 border-t border-slate-100 flex items-center justify-between caption-4 text-slate-500">
+            <span class="flex items-center gap-1.5">
+              <svg class="h-4 w-4 text-emerald-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+              <span data-i18n="nav.verifiedApk">Verified APK</span>
+            </span>
+            <span data-i18n="nav.androidVersion">Android 8.0 or newer</span>
+          </div>
+        </div>
+      </header>
+
+      <main class="flex-1">
+
+        <!-- =================================================================
+             2. HERO SECTION (Two-column desktop with phone visible on right)
+             ================================================================= -->
+        <section class="pt-24 pb-16 lg:pt-32 lg:pb-24 border-b border-slate-200 bg-white">
+          <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+              <!-- Left Column: Heading and Value Proposition -->
+              <div class="lg:col-span-7 flex flex-col items-start text-left">
+                <!-- Proof signal / kicker -->
+                <div class="caption-3 uppercase tracking-wider text-slate-500 mb-3 flex items-center gap-2">
+                  <img
+                    src="./logo_cec7fe47.jpg"
+                    alt="Rewardzen"
+                    class="h-5 w-5 rounded-md object-cover ring-1 ring-amber-400/50"
+                  />
+                  <span data-i18n="hero.kicker">Android rewards</span>
+                  <span aria-hidden="true" class="text-slate-300">·</span>
+                  <span class="text-amber-600 font-semibold" data-i18n="hero.rate">1 Coin = 1 Rupee</span>
+                  <span aria-hidden="true" class="text-slate-300">·</span>
+                  <span data-i18n="hero.speed">Fast bank transfer</span>
+                </div>
+
+                <!-- B5 Hero Heading: Download Rewardzen -->
+                <h1 data-i18n="hero.headline" class="heading-1 max-w-[680px] bg-gradient-to-r from-black to-neutral-600 bg-clip-text text-transparent leading-[1.08] mb-5">
+                  Download Rewardzen
+                </h1>
+
+                <!-- B5 Subheading -->
+                <p data-i18n="hero.subheadline" class="body-3 max-w-[680px] text-slate-600 mb-8 leading-relaxed">
+                  Earn coins by completing surveys with certified research partners, exploring verified banking offers, and inviting friends. Transfer money directly to your account starting at ten rupees.
+                </p>
+
+                <!-- Single primary CTA per A4 -->
+                <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 w-full sm:w-auto">
+                  <button
+                    type="button"
+                    data-open-download="download"
+                    class="button-md flex items-center justify-center gap-3 rounded-xl bg-slate-900 py-3.5 px-6 text-white hover:bg-slate-800 transition-smooth active:scale-98 shadow-xs whitespace-nowrap"
+                  >
+                    <svg class="h-5 w-5 text-amber-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+                    <span data-i18n="hero.downloadBtn">Download Rewardzen</span>
+                    <span class="text-slate-400 text-xs font-normal">29.3 MB</span>
+                  </button>
+
+                  <a
+                    href="#showcase"
+                    class="caption-1 font-semibold text-slate-600 hover:text-slate-900 transition-color-smooth flex items-center gap-1.5 py-2 px-1"
+                  >
+                    <span data-i18n="hero.viewScreensBtn">View nine production screens</span>
+                    <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                  </a>
+                </div>
+
+                <!-- Proof signals adjacent to claim per A2 & A4 -->
+                <div class="mt-10 pt-8 border-t border-slate-200 w-full grid grid-cols-3 gap-6">
+                  <div>
+                    <div class="flex items-center gap-1.5 text-amber-500 mb-1">
+                      <svg class="h-4 w-4 fill-amber-400 text-amber-400" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                      <span class="title-2 font-bold text-slate-900 tabular-nums">4.8 / 5.0</span>
+                    </div>
+                    <p class="caption-5 text-slate-500" data-i18n="hero.reviewsText">28,400 user reviews</p>
+                  </div>
+
+                  <div>
+                    <div class="title-2 font-bold text-slate-900 tabular-nums mb-1" data-i18n="hero.minWithdrawalValue">
+                      10 Rupees
+                    </div>
+                    <p class="caption-5 text-slate-500" data-i18n="hero.minWithdrawalText">Minimum withdrawal</p>
+                  </div>
+
+                  <div>
+                    <div class="flex items-center gap-1.5 text-emerald-600 mb-1 title-2 font-bold">
+                      <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+                      <span>Verified</span>
+                    </div>
+                    <p class="caption-5 text-slate-500" data-i18n="hero.verifiedSafeText">Play Protect safe</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right Column: 3D Perspective Smartphone Display Visible on Right Side -->
+              <div class="lg:col-span-5 flex flex-col items-center justify-center">
+                <!-- Screen Selector Tabs -->
+                <div class="w-full max-w-sm mb-4 flex items-center justify-between p-1 bg-slate-100 rounded-xl border border-slate-200">
+                  <button type="button" data-hero-tab="0" class="caption-3 py-1.5 px-3 rounded-lg transition-smooth whitespace-nowrap bg-white text-slate-900 shadow-xs ring-1 ring-slate-200">Home</button>
+                  <button type="button" data-hero-tab="1" class="caption-3 py-1.5 px-3 rounded-lg transition-smooth whitespace-nowrap text-slate-600 hover:text-slate-900">Offers</button>
+                  <button type="button" data-hero-tab="2" class="caption-3 py-1.5 px-3 rounded-lg transition-smooth whitespace-nowrap text-slate-600 hover:text-slate-900">Refer</button>
+                  <button type="button" data-hero-tab="3" class="caption-3 py-1.5 px-3 rounded-lg transition-smooth whitespace-nowrap text-slate-600 hover:text-slate-900">Wallet</button>
+                  <button type="button" data-hero-tab="4" class="caption-3 py-1.5 px-3 rounded-lg transition-smooth whitespace-nowrap text-slate-600 hover:text-slate-900">Wallet</button>
+                </div>
+
+                <!-- 3D Smartphone Stage -->
+                <div class="relative perspective-1200 w-full max-w-[320px] flex items-center justify-center group">
+                  <!-- Floating Benefit 1 -->
+                  <div class="hidden sm:flex absolute -top-4 -right-10 z-20 items-center gap-2.5 rounded-xl border border-slate-200 bg-white p-3 shadow-md transition-smooth hover:scale-102">
+                    <svg class="h-4 w-4 text-emerald-600 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                    <div class="text-left">
+                      <div class="caption-3 text-slate-900" data-i18n="hero.directBankTitle">Direct bank transfer</div>
+                      <div class="caption-5 text-slate-500" data-i18n="hero.directBankSub">Minimum 10 rupees</div>
+                    </div>
+                  </div>
+
+                  <!-- Floating Benefit 2 -->
+                  <div class="hidden sm:flex absolute -bottom-5 -left-10 z-20 items-center gap-2.5 rounded-xl border border-slate-200 bg-white p-3 shadow-md transition-smooth hover:scale-102">
+                    <div class="caption-3 font-bold text-amber-600 bg-amber-50 px-1.5 py-0.5 rounded">
+                      5 Coins
+                    </div>
+                    <div class="text-left">
+                      <div class="caption-3 text-slate-900" data-i18n="hero.referralRewardTitle">Referral reward</div>
+                      <div class="caption-5 text-slate-500" data-i18n="hero.referralRewardSub">Five rupees per invite</div>
+                    </div>
+                  </div>
+
+                  <!-- Device Bezel -->
+                  <div class="relative w-[300px] rounded-[40px] bg-slate-950 p-3 shadow-xl ring-1 ring-slate-800 transition-smooth transform lg:rotate-y-[-8deg] lg:rotate-x-[4deg] group-hover:rotate-y-0 group-hover:rotate-x-0">
+                    <!-- Camera punch-hole -->
+                    <div class="absolute top-4 left-1/2 -translate-x-1/2 z-30 flex items-center justify-center gap-2">
+                      <div class="h-3 w-3 rounded-full bg-slate-900 ring-2 ring-slate-800"></div>
+                      <div class="h-1.5 w-12 rounded-full bg-slate-800"></div>
+                    </div>
+
+                    <!-- Inner Screen -->
+                    <div class="relative aspect-[9/19.5] w-full overflow-hidden rounded-[32px] bg-slate-100">
+                      <img
+                        id="hero-phone-img"
+                        src="./4_53181ee4.jpg"
+                        alt="Main Dashboard &amp; Live Balance"
+                        referrerpolicy="no-referrer"
+                        class="h-full w-full object-cover"
+                        loading="eager"
+                      />
+
+                      <!-- Caption Bar -->
+                      <div class="absolute bottom-3 inset-x-3 rounded-xl bg-slate-950/85 backdrop-blur-md p-2.5 text-white flex items-center justify-between border border-white/10">
+                        <div class="flex items-center gap-2 truncate pr-2">
+                          <img
+                            src="./logo_cec7fe47.jpg"
+                            alt="Rewardzen"
+                            class="h-6 w-6 rounded-md object-cover ring-1 ring-amber-400/60 shrink-0"
+                          />
+                          <div class="truncate">
+                            <div id="hero-phone-title" class="caption-3 truncate text-white">Main Dashboard &amp; Live Balance</div>
+                            <div id="hero-phone-highlight" class="caption-5 text-amber-300 truncate">₹2,190.00 Total Balance Display</div>
+                          </div>
+                        </div>
+                        <span id="hero-phone-badge" class="caption-5 font-bold uppercase tracking-wider px-2 py-0.5 bg-blue-600 rounded text-white shrink-0">
+                          Core Screen
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <p class="caption-5 text-slate-500 mt-4 flex items-center gap-1.5">
+                  <svg class="h-3.5 w-3.5 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
+                  <span data-i18n="hero.tapTabsHint">Tap tabs to preview live app screens</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- =================================================================
+             3. LIVE COMMUNITY PAYOUT TICKER
+             ================================================================= -->
+        <div class="w-full bg-[#120826] text-slate-100 py-3 overflow-hidden border-y border-[#27124f]">
+          <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col sm:flex-row items-center gap-3 justify-between">
+              <!-- Ticker Lead -->
+              <div class="flex items-center gap-2 shrink-0 caption-3 uppercase tracking-wider text-amber-400">
+                <svg class="h-4 w-4 fill-amber-400 text-amber-400" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>
+                <span>Live withdrawals settled</span>
+              </div>
+
+              <!-- Continuous Ticker List -->
+              <div class="flex items-center gap-4 overflow-x-auto no-scrollbar py-1 caption-4 w-full sm:w-auto">
+                <div class="flex items-center gap-2 shrink-0 bg-[#211142] px-3 py-1.5 rounded-lg border border-[#381c6e] text-slate-200">
+                  <svg class="h-3.5 w-3.5 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.801 10A10 10 0 1 1 17 3.335"/><path d="m9 11 3 3L22 4"/></svg>
+                  <span class="font-semibold text-white">Monojit N.</span>
+                  <span class="text-purple-300/70">withdrew</span>
+                  <span class="font-bold text-amber-400 tabular-nums">₹2,190</span>
+                  <span class="text-slate-400 caption-5 hidden md:inline">(SBI Bank IMPS)</span>
+                  <span class="caption-5 text-slate-400 font-mono">· 2m ago</span>
+                </div>
+
+                <div class="flex items-center gap-2 shrink-0 bg-[#211142] px-3 py-1.5 rounded-lg border border-[#381c6e] text-slate-200">
+                  <svg class="h-3.5 w-3.5 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.801 10A10 10 0 1 1 17 3.335"/><path d="m9 11 3 3L22 4"/></svg>
+                  <span class="font-semibold text-white">Aman V.</span>
+                  <span class="text-purple-300/70">withdrew</span>
+                  <span class="font-bold text-amber-400 tabular-nums">₹450</span>
+                  <span class="text-slate-400 caption-5 hidden md:inline">(UPI Instant)</span>
+                  <span class="caption-5 text-slate-400 font-mono">· 5m ago</span>
+                </div>
+
+                <div class="flex items-center gap-2 shrink-0 bg-[#211142] px-3 py-1.5 rounded-lg border border-[#381c6e] text-slate-200">
+                  <svg class="h-3.5 w-3.5 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.801 10A10 10 0 1 1 17 3.335"/><path d="m9 11 3 3L22 4"/></svg>
+                  <span class="font-semibold text-white">Pooja S.</span>
+                  <span class="text-purple-300/70">withdrew</span>
+                  <span class="font-bold text-amber-400 tabular-nums">₹1,200</span>
+                  <span class="text-slate-400 caption-5 hidden md:inline">(HDFC IMPS)</span>
+                  <span class="caption-5 text-slate-400 font-mono">· 9m ago</span>
+                </div>
+
+                <div class="flex items-center gap-2 shrink-0 bg-[#211142] px-3 py-1.5 rounded-lg border border-[#381c6e] text-slate-200">
+                  <svg class="h-3.5 w-3.5 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.801 10A10 10 0 1 1 17 3.335"/><path d="m9 11 3 3L22 4"/></svg>
+                  <span class="font-semibold text-white">Vikram R.</span>
+                  <span class="text-purple-300/70">withdrew</span>
+                  <span class="font-bold text-amber-400 tabular-nums">₹350</span>
+                  <span class="text-slate-400 caption-5 hidden md:inline">(Paytm UPI)</span>
+                  <span class="caption-5 text-slate-400 font-mono">· 14m ago</span>
+                </div>
+
+                <div class="flex items-center gap-2 shrink-0 bg-[#211142] px-3 py-1.5 rounded-lg border border-[#381c6e] text-slate-200">
+                  <svg class="h-3.5 w-3.5 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.801 10A10 10 0 1 1 17 3.335"/><path d="m9 11 3 3L22 4"/></svg>
+                  <span class="font-semibold text-white">Sneha M.</span>
+                  <span class="text-purple-300/70">withdrew</span>
+                  <span class="font-bold text-amber-400 tabular-nums">₹800</span>
+                  <span class="text-slate-400 caption-5 hidden md:inline">(ICICI Bank)</span>
+                  <span class="caption-5 text-slate-400 font-mono">· 21m ago</span>
+                </div>
+              </div>
+
+              <!-- Speed Indicator -->
+              <div class="hidden lg:flex items-center gap-1.5 caption-4 text-slate-400 shrink-0">
+                <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
+                <span>Average payout speed: <strong class="text-white">8 minutes</strong></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- =================================================================
+             4. PRIMARY BENEFITS BENTO GRID
+             ================================================================= -->
+        <section id="benefits" class="py-20 bg-white border-b border-slate-200">
+          <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="max-w-[680px] text-left mb-12">
+              <div class="caption-3 uppercase tracking-wider text-slate-500 mb-2" data-i18n="benefits.kicker">
+                Primary benefits
+              </div>
+              <h2 class="heading-3 text-slate-900 mb-3" data-i18n="benefits.title">
+                Built for guaranteed earnings and rapid payouts
+              </h2>
+              <p class="body-4 text-slate-600" data-i18n="benefits.subtitle">
+                Every coin you collect is worth one rupee. Start withdrawing directly to your bank account with complete transparency.
+              </p>
+            </div>
+
+            <!-- Bento Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+              <!-- Card 1: Bank Withdrawals (Span 7) -->
+              <div class="md:col-span-7 rounded-3xl border border-slate-200 bg-slate-50 p-8 flex flex-col justify-between transition-smooth hover:border-slate-300">
+                <div>
+                  <div class="flex items-center justify-between mb-4">
+                    <span class="caption-3 text-slate-700" data-i18n="benefits.card1Number">01. Direct bank withdrawals</span>
+                    <span class="caption-4 text-emerald-700 bg-emerald-100/70 px-2.5 py-1 rounded-md border border-emerald-200" data-i18n="benefits.card1Badge">
+                      Minimum 10 rupees
+                    </span>
+                  </div>
+                  <h3 class="heading-5 text-slate-900 mb-3" data-i18n="benefits.card1Title">
+                    Immediate payment service transfers with zero deductions
+                  </h3>
+                  <p class="body-6 text-slate-600 leading-relaxed mb-6" data-i18n="benefits.card1Desc">
+                    Enter your bank account number and IFSC code directly in the application. Withdrawals are processed through rapid bank rails straight into State Bank of India, HDFC, ICICI, Axis, or any recognized bank.
+                  </p>
+
+                  <!-- Benefit bullets -->
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 caption-2 text-slate-700 mb-6">
+                    <div class="flex items-start gap-2">
+                      <svg class="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                      <span><strong data-i18n="benefits.b1Title">Accessible threshold</strong>: <span data-i18n="benefits.b1Desc">withdraw once you have ten coins.</span></span>
+                    </div>
+                    <div class="flex items-start gap-2">
+                      <svg class="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                      <span><strong data-i18n="benefits.b2Title">Flat exchange rate</strong>: <span data-i18n="benefits.b2Desc">one coin equals one rupee.</span></span>
+                    </div>
+                    <div class="flex items-start gap-2">
+                      <svg class="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                      <span><strong data-i18n="benefits.b3Title">Automated routing</strong>: <span data-i18n="benefits.b3Desc">verified IFSC code lookup.</span></span>
+                    </div>
+                    <div class="flex items-start gap-2">
+                      <svg class="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                      <span><strong data-i18n="benefits.b4Title">Complete records</strong>: <span data-i18n="benefits.b4Desc">full wallet transaction history.</span></span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Nested Card -->
+                <div class="rounded-xl border border-slate-200 bg-white p-4 flex items-center justify-between shadow-xs">
+                  <div class="flex items-center gap-3">
+                    <div class="h-10 w-10 rounded-lg bg-slate-900 text-white flex items-center justify-center font-bold text-sm">
+                      ₹
+                    </div>
+                    <div>
+                      <div class="caption-5 text-slate-500" data-i18n="benefits.balancePreviewLabel">Live balance in screen sample</div>
+                      <div class="title-2 font-bold text-slate-900 tabular-nums">2,190 Coins</div>
+                    </div>
+                  </div>
+                  <button
+                    type="button"
+                    data-inspect-screen="withdraw"
+                    class="caption-3 text-slate-800 hover:text-slate-950 transition-color-smooth flex items-center gap-1"
+                  >
+                    <span data-i18n="benefits.inspectScreenBtn">Inspect screen</span>
+                    <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Card 2: Partner Tasks (Span 5) -->
+              <div class="md:col-span-5 rounded-3xl border border-slate-200 bg-slate-50 p-8 flex flex-col justify-between transition-smooth hover:border-slate-300">
+                <div>
+                  <div class="flex items-center justify-between mb-4">
+                    <span class="caption-3 text-slate-700" data-i18n="benefits.card2Number">02. Verified research pipeline</span>
+                    <span class="caption-4 text-amber-800 bg-amber-100/70 px-2.5 py-1 rounded-md border border-amber-200" data-i18n="benefits.card2Badge">
+                      Up to 150 coins
+                    </span>
+                  </div>
+                  <h3 class="heading-5 text-slate-900 mb-3" data-i18n="benefits.card2Title">
+                    Top tier brand tasks and market surveys
+                  </h3>
+                  <p class="body-6 text-slate-600 leading-relaxed mb-6" data-i18n="benefits.card2Desc">
+                    Access curated partner opportunities including zero balance banking accounts, free demat registration, and daily market research surveys through CPX Research.
+                  </p>
+
+                  <div class="space-y-2 mb-6">
+                    <div class="flex items-center justify-between p-2.5 rounded-xl bg-white border border-slate-200 caption-4">
+                      <span class="font-semibold text-slate-800">AU Bank zero balance</span>
+                      <span class="font-bold text-emerald-700">Get 10.00</span>
+                    </div>
+                    <div class="flex items-center justify-between p-2.5 rounded-xl bg-white border border-slate-200 caption-4">
+                      <span class="font-semibold text-slate-800">Upstox free account</span>
+                      <span class="font-bold text-emerald-700">Get 10.00</span>
+                    </div>
+                    <div class="flex items-center justify-between p-2.5 rounded-xl bg-white border border-slate-200 caption-4">
+                      <span class="font-semibold text-slate-800">CPX Research surveys</span>
+                      <span class="font-bold text-amber-700">Up to 150</span>
+                    </div>
+                  </div>
+                </div>
+
+                <button
+                  type="button"
+                  data-inspect-screen="explore-offers"
+                  data-i18n="benefits.inspectScreenBtn"
+                  class="button-sm w-full py-2 px-3 text-center bg-white border border-slate-200 text-slate-700 rounded-lg hover:bg-slate-100 transition-color-smooth"
+                >
+                  Inspect screen
+                </button>
+              </div>
+
+              <!-- Card 3: Referral Program (Span 6) -->
+              <div class="md:col-span-6 rounded-3xl border border-slate-200 bg-slate-50 p-8 flex flex-col justify-between transition-smooth hover:border-slate-300">
+                <div>
+                  <div class="flex items-center justify-between mb-4">
+                    <span class="caption-3 text-slate-700" data-i18n="benefits.card3Number">03. Referral accelerator</span>
+                    <span class="caption-4 text-emerald-800 bg-emerald-100 px-2.5 py-1 rounded-md" data-i18n="benefits.card3Badge">
+                      Unlimited invites
+                    </span>
+                  </div>
+                  <h3 class="heading-5 text-slate-900 mb-3" data-i18n="benefits.card3Title">
+                    Earn five rupees for every friend who joins
+                  </h3>
+                  <p class="body-6 text-slate-600 leading-relaxed mb-6" data-i18n="benefits.card3Desc">
+                    Share your unique code directly to messaging apps. You receive five coins when your referral enters your code, and your friend receives three coins welcome bonus immediately.
+                  </p>
+
+                  <div class="p-4 rounded-xl bg-white border border-slate-200 mb-6 flex items-center justify-between">
+                    <div>
+                      <div class="caption-5 text-slate-500" data-i18n="benefits.codeSampleLabel">Sample referral code from app</div>
+                      <div class="title-1 font-mono font-bold text-slate-900">RB647RM6</div>
+                    </div>
+                    <span class="caption-4 bg-emerald-600 text-white font-semibold py-1.5 px-3 rounded-lg" data-i18n="benefits.shareReadyBadge">
+                      Share ready
+                    </span>
+                  </div>
+                </div>
+
+                <div class="flex items-center justify-between pt-4 border-t border-slate-200 caption-4 text-slate-600">
+                  <span data-i18n="benefits.card3Badge">Unlimited invites</span>
+                  <button
+                    type="button"
+                    data-inspect-screen="refer-earn"
+                    data-i18n="benefits.inspectScreenBtn"
+                    class="font-semibold text-slate-900 hover:underline"
+                  >
+                    Inspect screen
+                  </button>
+                </div>
+              </div>
+
+              <!-- Card 4: Architecture (Span 6) -->
+              <div class="md:col-span-6 rounded-3xl border border-slate-200 bg-slate-50 p-8 flex flex-col justify-between transition-smooth hover:border-slate-300">
+                <div>
+                  <div class="flex items-center justify-between mb-4">
+                    <span class="caption-3 text-slate-700" data-i18n="benefits.card4Number">04. Modern app design</span>
+                    <span class="caption-4 text-slate-700 bg-slate-200 px-2.5 py-1 rounded-md" data-i18n="benefits.card4Badge">
+                      Under 19 MB
+                    </span>
+                  </div>
+                  <h3 class="heading-5 text-slate-900 mb-3" data-i18n="benefits.card4Title">
+                    Lightweight, private and battery friendly
+                  </h3>
+                  <p class="body-6 text-slate-600 leading-relaxed mb-6" data-i18n="benefits.card4Desc">
+                    Engineered for quick startup on any Android smartphone from version 8.0 to 15. Includes light and dark themes, mobile phone verification, and a community support channel.
+                  </p>
+
+                  <div class="grid grid-cols-2 gap-3 caption-4 mb-6">
+                    <div class="p-3 rounded-xl bg-white border border-slate-200 flex items-center gap-2.5">
+                      <svg class="h-4 w-4 text-slate-700 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
+                      <div>
+                        <div class="font-semibold text-slate-900" data-i18n="benefits.themeTitle">Dual theme</div>
+                        <div class="caption-5 text-slate-500" data-i18n="benefits.themeSub">Light and dark modes</div>
+                      </div>
+                    </div>
+                    <div class="p-3 rounded-xl bg-white border border-slate-200 flex items-center gap-2.5">
+                      <svg class="h-4 w-4 text-emerald-600 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg>
+                      <div>
+                        <div class="font-semibold text-slate-900" data-i18n="benefits.otpTitle">One time password</div>
+                        <div class="caption-5 text-slate-500" data-i18n="benefits.otpSub">Passwordless sign in</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <button
+                  type="button"
+                  data-open-download="download"
+                  data-i18n="benefits.getApkBtn"
+                  class="button-sm w-full py-2 px-3 text-center bg-slate-900 text-white rounded-lg hover:bg-slate-800 transition-color-smooth shadow-xs"
+                >
+                  Download APK package
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- =================================================================
+             5. MANDATORY TAGLINE REVEAL SECTION (B11)
+             ================================================================= -->
+        <section class="py-20 bg-slate-100/60 border-y border-slate-200">
+          <div id="tagline-reveal-container" class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
+            <div class="caption-3 uppercase tracking-wider text-slate-500 mb-4" data-i18n="tagline.kicker">
+              The core principle
+            </div>
+
+            <h2 id="tagline-words" class="heading-3 mx-auto max-w-[680px] leading-tight text-slate-900">
+              <!-- Words injected and animated by app.js -->
+            </h2>
+
+            <p class="body-4 text-slate-600 mt-5 mx-auto max-w-[560px]" data-i18n="tagline.subtext">
+              One coin equals one rupee. Withdraw as soon as you earn ten rupees.
+            </p>
+          </div>
+        </section>
+
+        <!-- =================================================================
+             6. HOW IT WORKS (THREE STEPS) (A2)
+             ================================================================= -->
+        <section id="how-it-works" class="py-20 bg-white border-b border-slate-200">
+          <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="max-w-[680px] mb-12 text-left">
+              <div class="caption-3 uppercase tracking-wider text-slate-500 mb-2" data-i18n="howItWorks.kicker">
+                Simple process
+              </div>
+              <h2 class="heading-3 text-slate-900 mb-3" data-i18n="howItWorks.title">
+                How it works in three straightforward steps
+              </h2>
+              <p class="body-4 text-slate-600" data-i18n="howItWorks.subtitle">
+                No complicated conversion tiers or points calculations. Every action turns directly into money in your wallet.
+              </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+              <!-- Step 1 -->
+              <div class="p-6 rounded-2xl border border-slate-200 bg-white flex flex-col justify-between transition-smooth hover:border-slate-300 hover:shadow-xs">
+                <div>
+                  <div class="heading-4 font-semibold text-slate-400 mb-4 font-mono">01</div>
+                  <h3 class="title-2 text-slate-900 mb-2" data-i18n="howItWorks.step1Title">
+                    Install the APK on your device
+                  </h3>
+                  <p class="body-6 text-slate-600 leading-relaxed" data-i18n="howItWorks.step1Desc">
+                    Download the lightweight Android package and sign in within seconds using your ten digit mobile number and one time password.
+                  </p>
+                </div>
+                <div class="pt-6 mt-6 border-t border-slate-100 flex items-center gap-2 text-slate-500 caption-4">
+                  <svg class="h-4 w-4 text-emerald-600 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                  <span data-i18n="howItWorks.instantSettlement">Instant settlement</span>
+                </div>
+              </div>
+
+              <!-- Step 2 -->
+              <div class="p-6 rounded-2xl border border-slate-200 bg-white flex flex-col justify-between transition-smooth hover:border-slate-300 hover:shadow-xs">
+                <div>
+                  <div class="heading-4 font-semibold text-slate-400 mb-4 font-mono">02</div>
+                  <h3 class="title-2 text-slate-900 mb-2" data-i18n="howItWorks.step2Title">
+                    Complete verified surveys and partner tasks
+                  </h3>
+                  <p class="body-6 text-slate-600 leading-relaxed" data-i18n="howItWorks.step2Desc">
+                    Choose from daily research questionnaires, zero balance banking offers, or share your referral code with friends.
+                  </p>
+                </div>
+                <div class="pt-6 mt-6 border-t border-slate-100 flex items-center gap-2 text-slate-500 caption-4">
+                  <svg class="h-4 w-4 text-emerald-600 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                  <span data-i18n="howItWorks.instantSettlement">Instant settlement</span>
+                </div>
+              </div>
+
+              <!-- Step 3 -->
+              <div class="p-6 rounded-2xl border border-slate-200 bg-white flex flex-col justify-between transition-smooth hover:border-slate-300 hover:shadow-xs">
+                <div>
+                  <div class="heading-4 font-semibold text-slate-400 mb-4 font-mono">03</div>
+                  <h3 class="title-2 text-slate-900 mb-2" data-i18n="howItWorks.step3Title">
+                    Withdraw real cash directly to your bank
+                  </h3>
+                  <p class="body-6 text-slate-600 leading-relaxed" data-i18n="howItWorks.step3Desc">
+                    Enter your account number and IFSC code. Transfers process through immediate payment services starting at ten rupees.
+                  </p>
+                </div>
+                <div class="pt-6 mt-6 border-t border-slate-100 flex items-center gap-2 text-slate-500 caption-4">
+                  <svg class="h-4 w-4 text-emerald-600 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                  <span data-i18n="howItWorks.instantSettlement">Instant settlement</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50 flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div class="text-left">
+                <h4 class="title-3 text-slate-900" data-i18n="howItWorks.ctaBannerTitle">
+                  Ready to withdraw your first ten rupees today?
+                </h4>
+                <p class="body-5 text-slate-600" data-i18n="howItWorks.ctaBannerSub">
+                  Free download with verified package checksum.
+                </p>
+              </div>
+              <button
+                type="button"
+                data-open-download="download"
+                class="button-sm py-2 px-3 rounded-lg bg-slate-900 text-white hover:bg-slate-800 transition-color-smooth whitespace-nowrap shrink-0 flex items-center gap-2 shadow-xs"
+              >
+                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+                <span data-i18n="howItWorks.downloadBtn">Download APK</span>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- =================================================================
+             7. PRODUCTION APP SCREENS CAROUSEL (9 SCREENSHOTS)
+             ================================================================= -->
+        <section id="showcase" class="py-20 bg-slate-50 border-b border-slate-200">
+          <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <!-- Section Heading -->
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+              <div class="max-w-[680px] text-left">
+                <div class="caption-3 uppercase tracking-wider text-slate-500 mb-2 flex items-center gap-1.5">
+                  <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg>
+                  <span>Production interface</span>
+                  <span aria-hidden="true" class="text-slate-300">·</span>
+                  <span>Nine verified views</span>
+                </div>
+                <h2 class="heading-3 text-slate-900 mb-3">
+                  Explore the actual application before installing
+                </h2>
+                <p class="body-4 text-slate-600">
+                  Captured directly from our Android build. Inspect the transparent wallet balance, instant bank withdrawal form, and verified task offers.
+                </p>
+              </div>
+
+              <!-- Category Tabs -->
+              <div class="flex items-center gap-1.5 p-1 bg-white rounded-xl border border-slate-200 overflow-x-auto no-scrollbar shrink-0 shadow-xs">
+                <button type="button" data-showcase-filter="All" class="caption-4 py-1.5 px-3 rounded-lg transition-smooth whitespace-nowrap shrink-0 bg-slate-900 text-white font-semibold shadow-xs">All</button>
+                <button type="button" data-showcase-filter="Home" class="caption-4 py-1.5 px-3 rounded-lg transition-smooth whitespace-nowrap shrink-0 text-slate-600 hover:text-slate-900 hover:bg-slate-50">Home</button>
+                <button type="button" data-showcase-filter="Offers" class="caption-4 py-1.5 px-3 rounded-lg transition-smooth whitespace-nowrap shrink-0 text-slate-600 hover:text-slate-900 hover:bg-slate-50">Offers</button>
+                <button type="button" data-showcase-filter="Refer" class="caption-4 py-1.5 px-3 rounded-lg transition-smooth whitespace-nowrap shrink-0 text-slate-600 hover:text-slate-900 hover:bg-slate-50">Refer</button>
+                <button type="button" data-showcase-filter="Wallet" class="caption-4 py-1.5 px-3 rounded-lg transition-smooth whitespace-nowrap shrink-0 text-slate-600 hover:text-slate-900 hover:bg-slate-50">Wallet</button>
+                <button type="button" data-showcase-filter="Auth" class="caption-4 py-1.5 px-3 rounded-lg transition-smooth whitespace-nowrap shrink-0 text-slate-600 hover:text-slate-900 hover:bg-slate-50">Auth</button>
+                <button type="button" data-showcase-filter="Profile" class="caption-4 py-1.5 px-3 rounded-lg transition-smooth whitespace-nowrap shrink-0 text-slate-600 hover:text-slate-900 hover:bg-slate-50">Profile</button>
+              </div>
+            </div>
+
+            <!-- Main Showcase Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-white rounded-3xl border border-slate-200 p-6 sm:p-10 shadow-xs">
+              <!-- Phone Mockup Column -->
+              <div class="lg:col-span-5 flex flex-col items-center justify-center">
+                <div class="relative perspective-1200 w-full max-w-[310px] group">
+                  <!-- Device Frame -->
+                  <div class="relative mx-auto w-[280px] sm:w-[300px] rounded-[42px] bg-slate-950 p-3 shadow-xl ring-1 ring-slate-800 transition-smooth">
+                    <!-- Notch -->
+                    <div class="absolute top-4 left-1/2 -translate-x-1/2 z-30 flex items-center justify-center gap-2">
+                      <div class="h-3 w-3 rounded-full bg-slate-900 ring-2 ring-slate-800"></div>
+                      <div class="h-1 w-10 rounded-full bg-slate-800"></div>
+                    </div>
+
+                    <!-- Display -->
+                    <div class="relative aspect-[9/19.5] w-full overflow-hidden rounded-[34px] bg-slate-100">
+                      <img
+                        id="showcase-img"
+                        src="./4_53181ee4.jpg"
+                        alt="Main Dashboard &amp; Live Balance"
+                        referrerpolicy="no-referrer"
+                        class="h-full w-full object-cover transition-smooth"
+                        loading="lazy"
+                      />
+
+                      <!-- Zoom Button -->
+                      <button
+                        type="button"
+                        data-open-lightbox="true"
+                        class="absolute top-4 right-4 z-20 flex h-8 w-8 items-center justify-center rounded-full bg-slate-950/75 text-white backdrop-blur-xs hover:bg-slate-950 transition-color-smooth shadow-sm"
+                        title="Fullscreen zoom"
+                      >
+                        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" x2="14" y1="3" y2="10"/><line x1="3" x2="10" y1="21" y2="14"/></svg>
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Prev / Next Arrows -->
+                  <button
+                    id="showcase-prev"
+                    type="button"
+                    class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 flex h-9 w-9 items-center justify-center rounded-full bg-white border border-slate-200 text-slate-700 shadow-sm hover:bg-slate-50 hover:text-slate-950 transition-smooth active:scale-95 z-30"
+                    aria-label="Previous view"
+                  >
+                    <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                  </button>
+                  <button
+                    id="showcase-next"
+                    type="button"
+                    class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 flex h-9 w-9 items-center justify-center rounded-full bg-white border border-slate-200 text-slate-700 shadow-sm hover:bg-slate-50 hover:text-slate-950 transition-smooth active:scale-95 z-30"
+                    aria-label="Next view"
+                  >
+                    <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                  </button>
+                </div>
+
+                <!-- Pagination Indicators -->
+                <div class="mt-5 flex items-center gap-1.5">
+                  <button type="button" data-showcase-dot="0" class="h-2 rounded-full transition-smooth w-6 bg-slate-900" aria-label="Jump to screen 1"></button>
+                  <button type="button" data-showcase-dot="1" class="h-2 rounded-full transition-smooth w-2 bg-slate-200 hover:bg-slate-400" aria-label="Jump to screen 2"></button>
+                  <button type="button" data-showcase-dot="2" class="h-2 rounded-full transition-smooth w-2 bg-slate-200 hover:bg-slate-400" aria-label="Jump to screen 3"></button>
+                  <button type="button" data-showcase-dot="3" class="h-2 rounded-full transition-smooth w-2 bg-slate-200 hover:bg-slate-400" aria-label="Jump to screen 4"></button>
+                  <button type="button" data-showcase-dot="4" class="h-2 rounded-full transition-smooth w-2 bg-slate-200 hover:bg-slate-400" aria-label="Jump to screen 5"></button>
+                  <button type="button" data-showcase-dot="5" class="h-2 rounded-full transition-smooth w-2 bg-slate-200 hover:bg-slate-400" aria-label="Jump to screen 6"></button>
+                  <button type="button" data-showcase-dot="6" class="h-2 rounded-full transition-smooth w-2 bg-slate-200 hover:bg-slate-400" aria-label="Jump to screen 7"></button>
+                  <button type="button" data-showcase-dot="7" class="h-2 rounded-full transition-smooth w-2 bg-slate-200 hover:bg-slate-400" aria-label="Jump to screen 8"></button>
+                  <button type="button" data-showcase-dot="8" class="h-2 rounded-full transition-smooth w-2 bg-slate-200 hover:bg-slate-400" aria-label="Jump to screen 9"></button>
+                </div>
+              </div>
+
+              <!-- Details Column -->
+              <div class="lg:col-span-7 flex flex-col justify-between h-full pl-0 lg:pl-6 text-left">
+                <div>
+                  <div class="flex items-center gap-2 mb-3">
+                    <span id="showcase-category-label" class="caption-3 uppercase tracking-wider text-slate-700 bg-slate-100 px-2.5 py-1 rounded-md">
+                      Home screen
+                    </span>
+                    <span id="showcase-badge" class="caption-4 text-amber-800 bg-amber-50 px-2.5 py-1 rounded-md border border-amber-200">
+                      Core Screen
+                    </span>
+                  </div>
+
+                  <h3 id="showcase-title" class="heading-5 text-slate-900 mb-3">
+                    Main Dashboard &amp; Live Balance
+                  </h3>
+
+                  <p id="showcase-description" class="body-4 text-slate-600 leading-relaxed mb-6">
+                    Track your real-time coin balance, explore trending tasks from CPX Research and Loot Partner, and access quick withdrawals.
+                  </p>
+
+                  <!-- Callout box -->
+                  <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 mb-6">
+                    <div class="caption-3 uppercase tracking-wider text-slate-500 mb-1">
+                      Verified user value
+                    </div>
+                    <div class="title-2 font-bold text-slate-900 flex items-center gap-2">
+                      <svg class="h-4 w-4 text-emerald-600 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                      <span id="showcase-highlight">₹2,190.00 Total Balance Display</span>
+                    </div>
+                    <p class="caption-2 text-slate-600 mt-2">
+                      Transactions are logged permanently to your user ledger with clear date and reference timestamps.
+                    </p>
+                  </div>
+
+                  <div class="flex flex-wrap items-center gap-3">
+                    <button
+                      type="button"
+                      data-open-download="download"
+                      class="button-sm py-2 px-3 text-white bg-slate-900 rounded-lg hover:bg-slate-800 transition-color-smooth shadow-xs"
+                    >
+                      Download APK
+                    </button>
+                    <button
+                      type="button"
+                      data-open-lightbox="true"
+                      class="button-sm py-2 px-3 text-slate-700 bg-white border border-slate-200 rounded-lg hover:bg-slate-50 transition-color-smooth"
+                    >
+                      Fullscreen view
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Thumbnails -->
+                <div class="mt-8 pt-6 border-t border-slate-100">
+                  <div class="caption-3 text-slate-700 mb-3">All production screens:</div>
+                  <div class="grid grid-cols-5 sm:grid-cols-9 gap-2">
+                    <button type="button" data-showcase-thumb="0" class="relative aspect-[9/16] rounded-lg overflow-hidden border transition-smooth border-slate-900 ring-2 ring-slate-900/30 scale-102 shadow-xs" title="Main Dashboard &amp; Live Balance">
+                      <img src="./4_53181ee4.jpg" alt="Main Dashboard &amp; Live Balance" referrerpolicy="no-referrer" class="h-full w-full object-cover" loading="lazy" />
+                      <span class="absolute bottom-1 right-1 caption-5 font-bold text-white bg-slate-950/80 px-1 rounded">1</span>
+                    </button>
+                    <button type="button" data-showcase-thumb="1" class="relative aspect-[9/16] rounded-lg overflow-hidden border transition-smooth border-slate-200 opacity-60 hover:opacity-100 hover:border-slate-400" title="Explore High-Paying Offers">
+                      <img src="./6_a04b08a8.jpg" alt="Explore High-Paying Offers" referrerpolicy="no-referrer" class="h-full w-full object-cover" loading="lazy" />
+                      <span class="absolute bottom-1 right-1 caption-5 font-bold text-white bg-slate-950/80 px-1 rounded">2</span>
+                    </button>
+                    <button type="button" data-showcase-thumb="2" class="relative aspect-[9/16] rounded-lg overflow-hidden border transition-smooth border-slate-200 opacity-60 hover:opacity-100 hover:border-slate-400" title="Refer &amp; Earn Passive Income">
+                      <img src="./5_4d9e3fef.jpg" alt="Refer &amp; Earn Passive Income" referrerpolicy="no-referrer" class="h-full w-full object-cover" loading="lazy" />
+                      <span class="absolute bottom-1 right-1 caption-5 font-bold text-white bg-slate-950/80 px-1 rounded">3</span>
+                    </button>
+                    <button type="button" data-showcase-thumb="3" class="relative aspect-[9/16] rounded-lg overflow-hidden border transition-smooth border-slate-200 opacity-60 hover:opacity-100 hover:border-slate-400" title="Instant Multi-Channel Wallet">
+                      <img src="./7_ce21d9b0.jpg" alt="Instant Multi-Channel Wallet" referrerpolicy="no-referrer" class="h-full w-full object-cover" loading="lazy" />
+                      <span class="absolute bottom-1 right-1 caption-5 font-bold text-white bg-slate-950/80 px-1 rounded">4</span>
+                    </button>
+                    <button type="button" data-showcase-thumb="4" class="relative aspect-[9/16] rounded-lg overflow-hidden border transition-smooth border-slate-200 opacity-60 hover:opacity-100 hover:border-slate-400" title="Instant Bank &amp; IFSC Withdrawal">
+                      <img src="./8_5d727f5c.jpg" alt="Instant Bank &amp; IFSC Withdrawal" referrerpolicy="no-referrer" class="h-full w-full object-cover" loading="lazy" />
+                      <span class="absolute bottom-1 right-1 caption-5 font-bold text-white bg-slate-950/80 px-1 rounded">5</span>
+                    </button>
+                    <button type="button" data-showcase-thumb="5" class="relative aspect-[9/16] rounded-lg overflow-hidden border transition-smooth border-slate-200 opacity-60 hover:opacity-100 hover:border-slate-400" title="Sleek Onboarding Experience">
+                      <img src="./1_705b04dc.jpg" alt="Sleek Onboarding Experience" referrerpolicy="no-referrer" class="h-full w-full object-cover" loading="lazy" />
+                      <span class="absolute bottom-1 right-1 caption-5 font-bold text-white bg-slate-950/80 px-1 rounded">6</span>
+                    </button>
+                    <button type="button" data-showcase-thumb="6" class="relative aspect-[9/16] rounded-lg overflow-hidden border transition-smooth border-slate-200 opacity-60 hover:opacity-100 hover:border-slate-400" title="Instant 6-Digit OTP Sign-In">
+                      <img src="./2_ce2f60ad.jpg" alt="Instant 6-Digit OTP Sign-In" referrerpolicy="no-referrer" class="h-full w-full object-cover" loading="lazy" />
+                      <span class="absolute bottom-1 right-1 caption-5 font-bold text-white bg-slate-950/80 px-1 rounded">7</span>
+                    </button>
+                    <button type="button" data-showcase-thumb="7" class="relative aspect-[9/16] rounded-lg overflow-hidden border transition-smooth border-slate-200 opacity-60 hover:opacity-100 hover:border-slate-400" title="Standard Password Security">
+                      <img src="./3_9ad9eadb.jpg" alt="Standard Password Security" referrerpolicy="no-referrer" class="h-full w-full object-cover" loading="lazy" />
+                      <span class="absolute bottom-1 right-1 caption-5 font-bold text-white bg-slate-950/80 px-1 rounded">8</span>
+                    </button>
+                    <button type="button" data-showcase-thumb="8" class="relative aspect-[9/16] rounded-lg overflow-hidden border transition-smooth border-slate-200 opacity-60 hover:opacity-100 hover:border-slate-400" title="Dark &amp; Light Mode Customization">
+                      <img src="./9_a1577689.jpg" alt="Dark &amp; Light Mode Customization" referrerpolicy="no-referrer" class="h-full w-full object-cover" loading="lazy" />
+                      <span class="absolute bottom-1 right-1 caption-5 font-bold text-white bg-slate-950/80 px-1 rounded">9</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Lightbox Modal -->
+          <div id="lightbox-modal" class="hidden fixed inset-0 z-50 items-center justify-center bg-slate-950/80 backdrop-blur-sm p-4 animate-in fade-in duration-200">
+            <div class="relative max-w-sm sm:max-w-md w-full bg-slate-900 rounded-3xl overflow-hidden shadow-2xl border border-slate-700 p-2">
+              <div class="flex items-center justify-between p-3 text-white">
+                <div>
+                  <h4 id="lightbox-title" class="title-4 font-bold text-white">Main Dashboard &amp; Live Balance</h4>
+                  <p id="lightbox-category" class="caption-5 text-slate-400">Home</p>
+                </div>
+                <button
+                  id="lightbox-close"
+                  type="button"
+                  class="p-1.5 rounded-full bg-slate-800 text-slate-300 hover:text-white transition-color-smooth"
+                  aria-label="Close fullscreen preview"
+                >
+                  <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+                </button>
+              </div>
+
+              <div class="relative aspect-[9/19.5] w-full rounded-2xl overflow-hidden bg-black">
+                <img
+                  id="lightbox-img"
+                  src="./4_53181ee4.jpg"
+                  alt="Screen preview"
+                  referrerpolicy="no-referrer"
+                  class="h-full w-full object-contain"
+                />
+              </div>
+
+              <div class="p-3 text-center">
+                <button
+                  id="lightbox-download-btn"
+                  type="button"
+                  class="button-sm w-full py-2 px-3 rounded-lg bg-amber-400 text-slate-950 font-bold hover:bg-amber-300 transition-color-smooth"
+                >
+                  Download APK package
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- =================================================================
+             8. INTERACTIVE EARNINGS ESTIMATOR
+             ================================================================= -->
+        <section id="calculator" class="py-20 bg-white border-b border-slate-200">
+          <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+              <!-- Sliders Column -->
+              <div class="lg:col-span-7 text-left">
+                <div class="caption-3 uppercase tracking-wider text-slate-500 mb-2 flex items-center gap-1.5">
+                  <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="20" x="4" y="2" rx="2"/><line x1="8" x2="16" y1="6" y2="6"/><line x1="16" x2="16" y1="14" y2="18"/><path d="M16 10h.01"/><path d="M12 10h.01"/><path d="M8 10h.01"/><path d="M12 14h.01"/><path d="M8 14h.01"/><path d="M12 18h.01"/><path d="M8 18h.01"/></svg>
+                  <span data-i18n="calculator.kicker">Earnings estimator</span>
+                  <span aria-hidden="true" class="text-slate-300">·</span>
+                  <span data-i18n="calculator.rate">One coin equals one rupee</span>
+                </div>
+
+                <h2 class="heading-3 text-slate-900 mb-4" data-i18n="calculator.title">
+                  Estimate your monthly payout potential
+                </h2>
+
+                <p class="body-4 text-slate-600 mb-8 leading-relaxed" data-i18n="calculator.subtitle">
+                  Use the sliders below based on your available time for research tasks and friend recommendations.
+                </p>
+
+                <div class="space-y-6 p-6 rounded-2xl bg-slate-50 border border-slate-200">
+                  <!-- Slider 1 -->
+                  <div>
+                    <div class="flex items-center justify-between mb-2">
+                      <label for="tasks-slider" class="title-4 text-slate-800 flex items-center gap-2">
+                        <svg class="h-4 w-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="6"/><path d="M18.09 10.37A6 6 0 1 1 10.34 18"/><path d="M7 6h1v4"/><path d="m16.71 13.88.7.71-2.82 2.82"/></svg>
+                        <span data-i18n="calculator.tasksLabel">Completed tasks and surveys each day</span>
+                      </label>
+                      <span id="calc-tasks-badge" class="caption-3 text-slate-900 bg-white px-2.5 py-1 rounded-md border border-slate-200 tabular-nums">
+                        4 per day
+                      </span>
+                    </div>
+                    <input
+                      id="tasks-slider"
+                      type="range"
+                      min="1"
+                      max="20"
+                      step="1"
+                      value="4"
+                      class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-slate-900"
+                    />
+                    <div class="flex justify-between caption-5 text-slate-400 mt-1 font-mono">
+                      <span data-i18n="calculator.casual">1 casual</span>
+                      <span data-i18n="calculator.active">10 active</span>
+                      <span data-i18n="calculator.power">20 power user</span>
+                    </div>
+                  </div>
+
+                  <!-- Slider 2 -->
+                  <div>
+                    <div class="flex items-center justify-between mb-2">
+                      <label for="friends-slider" class="title-4 text-slate-800 flex items-center gap-2">
+                        <svg class="h-4 w-4 text-emerald-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        <span data-i18n="calculator.friendsLabel">Invited friends each month</span>
+                      </label>
+                      <span id="calc-friends-badge" class="caption-3 text-emerald-800 bg-white px-2.5 py-1 rounded-md border border-slate-200 tabular-nums">
+                        15 friends
+                      </span>
+                    </div>
+                    <input
+                      id="friends-slider"
+                      type="range"
+                      min="0"
+                      max="80"
+                      step="5"
+                      value="15"
+                      class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-emerald-600"
+                    />
+                    <div class="flex justify-between caption-5 text-slate-400 mt-1 font-mono">
+                      <span data-i18n="calculator.solo">0 solo</span>
+                      <span data-i18n="calculator.social">40 social</span>
+                      <span data-i18n="calculator.campus">80 campus</span>
+                    </div>
+                  </div>
+
+                  <div class="pt-2 caption-4 text-slate-500 flex items-center gap-2 border-t border-slate-200">
+                    <svg class="h-4 w-4 text-emerald-600 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                    <span data-i18n="calculator.settlementNote">Withdrawals settle in ten rupee increments directly to your bank account.</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Result Card (Royal Midnight Purple + Radiant Gold Theme) -->
+              <div class="lg:col-span-5">
+                <div class="rounded-3xl bg-[#140A2E] text-white p-8 border border-[#2B165C] shadow-xl relative overflow-hidden">
+                  <!-- Subtle ambient brand glow -->
+                  <div class="absolute -top-12 -right-12 w-48 h-48 bg-purple-700/20 rounded-full blur-3xl pointer-events-none"></div>
+                  <div class="absolute -bottom-12 -left-12 w-48 h-48 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+                  <div class="relative flex items-center justify-between mb-6">
+                    <span class="caption-3 uppercase tracking-wider text-amber-400 flex items-center gap-1.5">
+                      <svg class="h-3.5 w-3.5 text-amber-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="6"/><path d="M18.09 10.37A6 6 0 1 1 10.34 18"/><path d="M7 6h1v4"/><path d="m16.71 13.88.7.71-2.82 2.82"/></svg>
+                      <span data-i18n="calculator.estimatedIncomeTitle">Estimated monthly income</span>
+                    </span>
+                    <span id="calc-tier-badge" class="caption-4 px-2.5 py-1 rounded-md bg-[#24134B] text-amber-200 border border-[#3C1E7A]">
+                      Level 2 · Active contributor
+                    </span>
+                  </div>
+
+                  <div class="relative mb-6">
+                    <div class="heading-1 text-white tracking-tight tabular-nums flex items-baseline gap-1">
+                      <span class="text-amber-400">₹</span>
+                      <span id="calc-total-rupees">2,175</span>
+                      <span class="title-3 text-purple-200/70 font-normal" data-i18n="calculator.perMonth">per month</span>
+                    </div>
+                    <p class="caption-4 text-purple-200/80 mt-1">
+                      Equal to <strong id="calc-total-coins" class="text-amber-300 font-semibold tabular-nums">2,175 coins</strong>
+                    </p>
+                  </div>
+
+                  <div class="relative space-y-3 py-4 border-y border-[#2B165C] caption-4">
+                    <div class="flex justify-between items-center text-purple-200/90">
+                      <span><span data-i18n="calculator.dailyRunRate">Daily estimated rate</span>:</span>
+                      <span id="calc-daily-rate" class="font-bold text-white tabular-nums">≈ ₹73 per day</span>
+                    </div>
+                    <div class="flex justify-between items-center text-purple-200/90">
+                      <span><span data-i18n="calculator.taskEarningsLabel">Task earnings</span>:</span>
+                      <span id="calc-task-earnings" class="tabular-nums text-white">₹1,800</span>
+                    </div>
+                    <div class="flex justify-between items-center text-purple-200/90">
+                      <span><span data-i18n="calculator.referralBonusLabel">Referral bonus</span>:</span>
+                      <span id="calc-referral-bonus" class="text-emerald-400 font-semibold tabular-nums">+₹375</span>
+                    </div>
+                  </div>
+
+                  <div class="relative mt-6">
+                    <button
+                      type="button"
+                      data-open-download="download"
+                      class="button-md w-full py-2.5 px-4 rounded-xl bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 font-bold hover:brightness-105 transition-smooth flex items-center justify-center gap-2 shadow-sm"
+                    >
+                      <span data-i18n="calculator.ctaBtn">Start earning with Rewardzen</span>
+                      <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    </button>
+                    <p class="caption-5 text-center text-purple-300/70 mt-3" data-i18n="calculator.freeApkNote">
+                      Free APK download for Android phones
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- =================================================================
+             9. SOCIAL PROOF & TESTIMONIALS
+             ================================================================= -->
+        <section id="testimonials" class="py-20 bg-slate-50 border-b border-slate-200">
+          <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <!-- Section Heading -->
+            <div class="max-w-[680px] text-left mb-12">
+              <div class="caption-3 uppercase tracking-wider text-slate-500 mb-2" data-i18n="testimonials.kicker">
+                Verified payouts
+              </div>
+              <h2 class="heading-3 text-slate-900 mb-3" data-i18n="testimonials.title">
+                Real user feedback and verified bank transfers
+              </h2>
+              <p class="body-4 text-slate-600" data-i18n="testimonials.subtitle">
+                See how active earners across India withdraw supplemental earnings directly to their bank accounts.
+              </p>
+            </div>
+
+            <!-- Testimonials Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+              <!-- Testimonial 1 -->
+              <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-xs flex flex-col justify-between transition-smooth hover:border-slate-300">
+                <div>
+                  <div class="flex items-center justify-between mb-4">
+                    <div class="flex items-center gap-1 text-amber-400">
+                      <svg class="h-4 w-4 fill-amber-400" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                      <svg class="h-4 w-4 fill-amber-400" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                      <svg class="h-4 w-4 fill-amber-400" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                      <svg class="h-4 w-4 fill-amber-400" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                      <svg class="h-4 w-4 fill-amber-400" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    </div>
+                    <span class="caption-4 text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-200 flex items-center gap-1">
+                      <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                      SBI IMPS Transfer
+                    </span>
+                  </div>
+                  <p class="body-5 text-slate-700 leading-relaxed mb-6">
+                    "The 1 Coin = ₹1 conversion rate is completely transparent. I withdrew ₹2,190 to my SBI account using my IFSC code, and the IMPS transfer arrived within 10 minutes. The referral program is by far the most generous I have tested."
+                  </p>
+                </div>
+                <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                  <div>
+                    <div class="title-4 font-bold text-slate-900">Mono Nandy</div>
+                    <div class="caption-5 text-slate-500">Kolkata, West Bengal</div>
+                  </div>
+                  <div class="text-right">
+                    <div class="caption-3 font-bold text-slate-900 tabular-nums">₹2,190.00 Withdrawn</div>
+                    <div class="caption-5 text-slate-400">Verified 3 days ago</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Testimonial 2 -->
+              <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-xs flex flex-col justify-between transition-smooth hover:border-slate-300">
+                <div>
+                  <div class="flex items-center justify-between mb-4">
+                    <div class="flex items-center gap-1 text-amber-400">
+                      <svg class="h-4 w-4 fill-amber-400" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                      <svg class="h-4 w-4 fill-amber-400" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                      <svg class="h-4 w-4 fill-amber-400" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                      <svg class="h-4 w-4 fill-amber-400" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                      <svg class="h-4 w-4 fill-amber-400" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    </div>
+                    <span class="caption-4 text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-200 flex items-center gap-1">
+                      <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                      UPI Auto-Credit
+                    </span>
+                  </div>
+                  <p class="body-5 text-slate-700 leading-relaxed mb-6">
+                    "I usually complete 2 to 3 surveys during my commute on CPX Research. You do not need to wait for months to reach a payout because the minimum limit is just ₹10. Very smooth and super lightweight app."
+                  </p>
+                </div>
+                <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                  <div>
+                    <div class="title-4 font-bold text-slate-900">Aniket Sharma</div>
+                    <div class="caption-5 text-slate-500">Pune, Maharashtra</div>
+                  </div>
+                  <div class="text-right">
+                    <div class="caption-3 font-bold text-slate-900 tabular-nums">₹4,850.00 Total Earned</div>
+                    <div class="caption-5 text-slate-400">Verified 1 week ago</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Testimonial 3 -->
+              <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-xs flex flex-col justify-between transition-smooth hover:border-slate-300">
+                <div>
+                  <div class="flex items-center justify-between mb-4">
+                    <div class="flex items-center gap-1 text-amber-400">
+                      <svg class="h-4 w-4 fill-amber-400" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                      <svg class="h-4 w-4 fill-amber-400" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                      <svg class="h-4 w-4 fill-amber-400" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                      <svg class="h-4 w-4 fill-amber-400" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                      <svg class="h-4 w-4 fill-amber-400" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    </div>
+                    <span class="caption-4 text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-200 flex items-center gap-1">
+                      <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                      Bank Transfer
+                    </span>
+                  </div>
+                  <p class="body-5 text-slate-700 leading-relaxed mb-6">
+                    "Downloading the APK was completely safe and passed Google Play Protect scan without warnings. The instant OTP login means I do not have to remember complicated passwords. Love the clean light design!"
+                  </p>
+                </div>
+                <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                  <div>
+                    <div class="title-4 font-bold text-slate-900">Deepika Rao</div>
+                    <div class="caption-5 text-slate-500">Bengaluru, Karnataka</div>
+                  </div>
+                  <div class="text-right">
+                    <div class="caption-3 font-bold text-slate-900 tabular-nums">₹1,420.00 Withdrawn</div>
+                    <div class="caption-5 text-slate-400">Verified 2 weeks ago</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Risk reversal banner -->
+            <div class="rounded-2xl bg-slate-900 text-white p-8 flex flex-col md:flex-row items-center justify-between gap-6 border border-slate-800">
+              <div class="text-left max-w-xl">
+                <div class="caption-3 uppercase tracking-wider text-amber-400 flex items-center gap-1.5 mb-2">
+                  <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+                  <span data-i18n="testimonials.bannerKicker">Zero risk and free download</span>
+                </div>
+                <h3 class="heading-5 text-white mb-2" data-i18n="testimonials.bannerTitle">
+                  Start earning your first ten rupees within fifteen minutes
+                </h3>
+                <p class="body-6 text-slate-300" data-i18n="testimonials.bannerSub">
+                  Install the official package, verify with your phone number, and choose your first partner task.
+                </p>
+              </div>
+
+              <button
+                type="button"
+                data-open-download="download"
+                class="button-sm py-2 px-3 rounded-lg bg-amber-400 text-slate-950 font-bold hover:bg-amber-300 transition-color-smooth whitespace-nowrap shrink-0 flex items-center gap-2"
+              >
+                <span data-i18n="testimonials.downloadBtn">Download APK</span>
+                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- =================================================================
+             10. FREQUENTLY ASKED QUESTIONS (7 QUESTIONS)
+             ================================================================= -->
+        <section id="faq" class="py-20 bg-white border-b border-slate-200">
+          <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+              <div class="caption-3 uppercase tracking-wider text-slate-500 mb-2 flex items-center justify-center gap-1.5">
+                <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
+                <span data-i18n="faq.kicker">Questions and answers</span>
+                <span aria-hidden="true" class="text-slate-300">·</span>
+                <span data-i18n="faq.clarity">Clarity first</span>
+              </div>
+              <h2 class="heading-3 text-slate-900 mb-3" data-i18n="faq.title">
+                Frequently asked questions
+              </h2>
+              <p class="body-4 text-slate-600 max-w-xl mx-auto" data-i18n="faq.subtitle">
+                Everything you need to know about coin exchange rates, safety verification, and bank transfers.
+              </p>
+            </div>
+
+            <!-- Accordion List -->
+            <div class="space-y-3">
+              <div data-faq-item="0" class="rounded-xl border border-slate-200 bg-white transition-smooth overflow-hidden hover:border-slate-300">
+                <button type="button" data-faq-toggle="0" class="w-full flex items-center justify-between p-5 text-left title-4 font-semibold text-slate-900 hover:text-slate-950 transition-color-smooth">
+                  <span class="pr-4">How does Rewardzen work and how do I earn real cash?</span>
+                  <svg data-faq-chevron class="h-4 w-4 shrink-0 transition-smooth rotate-180 text-slate-900" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                </button>
+                <div data-faq-answer class="px-5 pb-5 body-5 text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+                  Rewardzen connects you with verified research partners and participating service providers. When you complete market research questionnaires, try verified banking options, or invite friends, you earn coins. One coin equals one rupee with zero hidden deduction fees.
+                </div>
+              </div>
+
+              <div data-faq-item="1" class="rounded-xl border border-slate-200 bg-white transition-smooth overflow-hidden hover:border-slate-300">
+                <button type="button" data-faq-toggle="1" class="w-full flex items-center justify-between p-5 text-left title-4 font-semibold text-slate-900 hover:text-slate-950 transition-color-smooth">
+                  <span class="pr-4">What is the minimum withdrawal amount and how fast is payout?</span>
+                  <svg data-faq-chevron class="h-4 w-4 text-slate-400 shrink-0 transition-smooth" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                </button>
+                <div data-faq-answer class="hidden px-5 pb-5 body-5 text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+                  The minimum withdrawal limit is ten coins, which equals ten rupees. You can transfer funds directly to any bank in India using your account number and IFSC code. Transfers process through immediate payment services within fifteen minutes of request submission.
+                </div>
+              </div>
+
+              <div data-faq-item="2" class="rounded-xl border border-slate-200 bg-white transition-smooth overflow-hidden hover:border-slate-300">
+                <button type="button" data-faq-toggle="2" class="w-full flex items-center justify-between p-5 text-left title-4 font-semibold text-slate-900 hover:text-slate-950 transition-color-smooth">
+                  <span class="pr-4">Is downloading and installing the APK file safe for my Android device?</span>
+                  <svg data-faq-chevron class="h-4 w-4 text-slate-400 shrink-0 transition-smooth" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                </button>
+                <div data-faq-answer class="hidden px-5 pb-5 body-5 text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+                  Yes, completely safe. Rewardzen is built without unnecessary permissions, contains zero adware or bloatware, and passes Google Play Protect checks. We publish our cryptographic SHA256 checksums publicly so you can verify package integrity.
+                </div>
+              </div>
+
+              <div data-faq-item="3" class="rounded-xl border border-slate-200 bg-white transition-smooth overflow-hidden hover:border-slate-300">
+                <button type="button" data-faq-toggle="3" class="w-full flex items-center justify-between p-5 text-left title-4 font-semibold text-slate-900 hover:text-slate-950 transition-color-smooth">
+                  <span class="pr-4">How does the referral program work?</span>
+                  <svg data-faq-chevron class="h-4 w-4 text-slate-400 shrink-0 transition-smooth" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                </button>
+                <div data-faq-answer class="hidden px-5 pb-5 body-5 text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+                  When you share your unique referral code with friends, they receive three coins welcome credit upon signup. Once they start completing tasks, you receive five coins credited directly into your wallet balance.
+                </div>
+              </div>
+
+              <div data-faq-item="4" class="rounded-xl border border-slate-200 bg-white transition-smooth overflow-hidden hover:border-slate-300">
+                <button type="button" data-faq-toggle="4" class="w-full flex items-center justify-between p-5 text-left title-4 font-semibold text-slate-900 hover:text-slate-950 transition-color-smooth">
+                  <span class="pr-4">What Android OS versions are supported?</span>
+                  <svg data-faq-chevron class="h-4 w-4 text-slate-400 shrink-0 transition-smooth" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                </button>
+                <div data-faq-answer class="hidden px-5 pb-5 body-5 text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+                  Version 2.4.0 supports Android 8.0 Oreo through Android 15. If you use an older device, our legacy build version 2.3.8 supports Android 7.0 Nougat.
+                </div>
+              </div>
+
+              <div data-faq-item="5" class="rounded-xl border border-slate-200 bg-white transition-smooth overflow-hidden hover:border-slate-300">
+                <button type="button" data-faq-toggle="5" class="w-full flex items-center justify-between p-5 text-left title-4 font-semibold text-slate-900 hover:text-slate-950 transition-color-smooth">
+                  <span class="pr-4">Are there any hidden fees or deductions on withdrawals?</span>
+                  <svg data-faq-chevron class="h-4 w-4 text-slate-400 shrink-0 transition-smooth" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                </button>
+                <div data-faq-answer class="hidden px-5 pb-5 body-5 text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+                  No. The full value of your coins is credited directly to your bank account. If you withdraw fifty coins, you receive exactly fifty rupees in your bank.
+                </div>
+              </div>
+
+              <div data-faq-item="6" class="rounded-xl border border-slate-200 bg-white transition-smooth overflow-hidden hover:border-slate-300">
+                <button type="button" data-faq-toggle="6" class="w-full flex items-center justify-between p-5 text-left title-4 font-semibold text-slate-900 hover:text-slate-950 transition-color-smooth">
+                  <span class="pr-4">How do I contact customer support or get help?</span>
+                  <svg data-faq-chevron class="h-4 w-4 text-slate-400 shrink-0 transition-smooth" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                </button>
+                <div data-faq-answer class="hidden px-5 pb-5 body-5 text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+                  You can access the Help Center and FAQ directly in your app profile, open a support ticket, or join the official Telegram community channel.
+                </div>
+              </div>
+            </div>
+
+            <!-- Telegram Community -->
+            <div class="mt-12 p-6 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4 text-left">
+              <div class="flex items-center gap-3">
+                <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-900 text-white shrink-0">
+                  <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/><path d="m21.854 2.147-10.94 10.939"/></svg>
+                </div>
+                <div>
+                  <h4 class="title-4 font-bold text-slate-900" data-i18n="faq.telegramTitle">Need direct assistance or want to talk to members?</h4>
+                  <p class="caption-4 text-slate-500" data-i18n="faq.telegramSub">Join our official community channel on Telegram.</p>
+                </div>
+              </div>
+              <a
+                href="https://t.me"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-i18n="faq.joinTelegramBtn"
+                class="button-sm py-2 px-3 rounded-lg bg-white border border-slate-200 text-slate-800 hover:bg-slate-100 transition-color-smooth whitespace-nowrap"
+              >
+                Join Telegram
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- =================================================================
+             11. DEDICATED CENTERED DOWNLOAD CTA SECTION
+             ================================================================= -->
+        <section id="download" class="py-20 bg-slate-50 border-b border-slate-200 text-center">
+          <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+            <!-- Centered App Icon with Brand Ring -->
+            <div class="flex justify-center mb-5">
+              <img
+                src="./logo_cec7fe47.jpg"
+                alt="Rewardzen logo"
+                class="h-16 w-16 rounded-2xl object-cover ring-2 ring-amber-400/60 shadow-md"
+              />
+            </div>
+
+            <!-- Centered Section Kicker -->
+            <div class="caption-3 uppercase tracking-wider text-slate-500 mb-2 flex items-center justify-center gap-1.5">
+              <svg class="h-4 w-4 text-emerald-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+              <span>Official Android release v2.4.0</span>
+            </div>
+
+            <!-- Centered Heading: "Download Rewardzen" -->
+            <h2 class="heading-2 text-slate-900 mb-3 tracking-tight">
+              Download Rewardzen
+            </h2>
+
+            <!-- Centered Subtitle -->
+            <p class="body-4 text-slate-600 max-w-[580px] mx-auto mb-8 leading-relaxed">
+              Install the authentic Android APK directly to your phone. Complete simple tasks, explore verified banking offers, and withdraw instant cash to your bank account starting from ten rupees.
+            </p>
+
+            <!-- Centered Download Actions -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+              <button
+                type="button"
+                data-open-download="download"
+                class="button-md py-3.5 px-6 rounded-xl bg-slate-900 text-white hover:bg-slate-800 transition-smooth active:scale-98 flex items-center justify-center gap-2.5 shadow-xs whitespace-nowrap"
+              >
+                <svg class="h-4 w-4 text-amber-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+                <span>Download Rewardzen (29.3 MB)</span>
+              </button>
+
+              <button
+                type="button"
+                data-open-download="qr"
+                class="button-md py-3.5 px-6 rounded-xl bg-white border border-slate-200 text-slate-800 hover:bg-slate-100 transition-smooth active:scale-98 flex items-center justify-center gap-2 shadow-xs whitespace-nowrap"
+              >
+                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="5" height="5" x="3" y="3" rx="1"/><rect width="5" height="5" x="16" y="3" rx="1"/><rect width="5" height="5" x="3" y="16" rx="1"/><path d="M21 16h-3a2 2 0 0 0-2 2v3"/><path d="M21 21v.01"/><path d="M12 7v3a2 2 0 0 1-2 2H7"/><path d="M3 12h.01"/><path d="M12 3h.01"/><path d="M12 16v.01"/><path d="M16 12h1"/><path d="M21 12v.01"/><path d="M12 21v-1"/></svg>
+                <span>Scan QR Code</span>
+              </button>
+            </div>
+
+            <!-- Centered Trust and Proof Row -->
+            <div class="pt-6 border-t border-slate-200 flex flex-wrap items-center justify-center gap-4 sm:gap-6 caption-4 text-slate-500">
+              <div class="flex items-center gap-1.5">
+                <svg class="h-3.5 w-3.5 text-emerald-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                <span>100% Virus-Free APK</span>
+              </div>
+              <span aria-hidden="true" class="text-slate-300">·</span>
+              <div class="flex items-center gap-1.5">
+                <span>Android 8.0 or newer</span>
+              </div>
+              <span aria-hidden="true" class="text-slate-300">·</span>
+              <div class="flex items-center gap-1.5 text-slate-700 font-semibold">
+                <svg class="h-3.5 w-3.5 text-emerald-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+                <span>1,200+ Downloads Today</span>
+              </div>
+              <span aria-hidden="true" class="text-slate-300">·</span>
+              <div>
+                <span>Min withdrawal: ₹10</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+      <!-- ===================================================================
+           12. FOOTER
+           =================================================================== -->
+      <footer class="bg-slate-900 text-slate-400 py-14 border-t border-slate-800 text-xs">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-10 mb-12">
+            <!-- Brand & Description -->
+            <div class="md:col-span-5 text-left">
+              <div class="flex items-center gap-2.5 mb-3">
+                <img
+                  src="./logo_cec7fe47.jpg"
+                  alt="Rewardzen logo"
+                  class="h-8 w-8 rounded-lg object-cover ring-1 ring-amber-400/50 shadow-xs"
+                />
+                <span class="title-3 font-bold text-white tracking-tight">Rewardzen</span>
+              </div>
+              <p class="body-6 text-slate-400 leading-relaxed max-w-sm mb-4" data-i18n="footer.description">
+                Rewardzen provides verified cash tasks, research questionnaires, and referral rewards for Android users, with direct bank account transfers.
+              </p>
+              <div class="flex items-center gap-2 caption-5 text-slate-400">
+                <svg class="h-4 w-4 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+                <span data-i18n="footer.safetyNote">Verified Android release with Play Protect safety</span>
+              </div>
+            </div>
+
+            <!-- Navigation Links -->
+            <div class="md:col-span-3 text-left">
+              <div class="caption-3 font-bold text-white uppercase tracking-wider mb-3" data-i18n="footer.navTitle">
+                Page navigation
+              </div>
+              <ul class="space-y-2 caption-4 text-slate-400">
+                <li><a href="#benefits" data-i18n="nav.benefits" class="hover:text-white transition-color-smooth">Benefits</a></li>
+                <li><a href="#how-it-works" data-i18n="nav.howItWorks" class="hover:text-white transition-color-smooth">How it works</a></li>
+                <li><a href="#showcase" data-i18n="nav.screens" class="hover:text-white transition-color-smooth">App screens</a></li>
+                <li><a href="#calculator" data-i18n="nav.calculator" class="hover:text-white transition-color-smooth">Calculator</a></li>
+                <li><a href="#testimonials" data-i18n="nav.proofs" class="hover:text-white transition-color-smooth">Payout proofs</a></li>
+                <li><a href="#faq" data-i18n="nav.faq" class="hover:text-white transition-color-smooth">FAQs</a></li>
+              </ul>
+            </div>
+
+            <!-- Download Action -->
+            <div class="md:col-span-4 text-left">
+              <div class="caption-3 font-bold text-white uppercase tracking-wider mb-3" data-i18n="footer.getAppTitle">
+                Get the application
+              </div>
+              <p class="caption-4 text-slate-400 mb-4 leading-relaxed" data-i18n="footer.getAppDesc">
+                Download the official signed package file directly to your smartphone. Free of charge with zero in app subscription fees.
+              </p>
+              <button
+                type="button"
+                data-open-download="download"
+                class="button-sm py-2 px-3 rounded-lg bg-slate-800 text-white hover:bg-slate-700 transition-color-smooth flex items-center gap-2 border border-slate-700 shadow-xs"
+              >
+                <svg class="h-4 w-4 text-amber-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+                <span data-i18n="footer.downloadApkBtn">Download APK (29.3 MB)</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Bottom Bar -->
+          <div class="pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 caption-5 text-slate-500">
+            <div>
+              © <span id="footer-year">2026</span> <span data-i18n="footer.copyright">Rewardzen. All rights reserved. One coin equals one rupee.</span>
+            </div>
+            <div class="flex items-center gap-4 text-slate-400">
+              <a href="#faq" data-i18n="footer.privacy" class="hover:text-slate-300 transition-color-smooth">Privacy policy</a>
+              <span>·</span>
+              <a href="#faq" data-i18n="footer.terms" class="hover:text-slate-300 transition-color-smooth">Terms of service</a>
+              <span>·</span>
+              <a href="#faq" data-i18n="footer.help" class="hover:text-slate-300 transition-color-smooth">Help center</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <!-- ===================================================================
+           13. DOWNLOAD APK MODAL (Version Selector, SHA256, Dynamic QR, Guide)
+           =================================================================== -->
+      <div id="download-modal" class="hidden fixed inset-0 z-50 items-center justify-center bg-slate-950/70 backdrop-blur-sm p-4 animate-in fade-in duration-200">
+        <div class="relative max-w-xl w-full bg-white rounded-3xl shadow-2xl border border-slate-200 overflow-hidden text-left">
+          <!-- Top Header -->
+          <div class="flex items-center justify-between px-6 py-4 border-b border-slate-100 bg-slate-50">
+            <div class="flex items-center gap-2.5">
+              <img
+                src="./logo_cec7fe47.jpg"
+                alt="Rewardzen logo"
+                class="h-9 w-9 rounded-xl object-cover ring-1 ring-amber-400/50 shadow-xs"
+              />
+              <div>
+                <h3 class="title-3 font-bold text-slate-900" data-i18n="modal.title">Download Rewardzen APK</h3>
+                <p class="caption-5 text-slate-500" data-i18n="modal.subtitle">Official Android package distribution</p>
+              </div>
+            </div>
+            <button
+              id="modal-close-btn"
+              type="button"
+              class="p-2 rounded-lg text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition-color-smooth"
+              aria-label="Close dialog"
+            >
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+            </button>
+          </div>
+
+          <!-- Navigation Tabs -->
+          <div class="flex border-b border-slate-200 px-6 pt-2 caption-3">
+            <button type="button" data-modal-tab="download" class="py-3 px-3 border-b-2 transition-smooth flex items-center gap-1.5 border-slate-900 text-slate-900 font-semibold">
+              <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+              <span data-i18n="modal.tabDirect">Direct APK file</span>
+            </button>
+
+            <button type="button" data-modal-tab="qr" class="py-3 px-3 border-b-2 transition-smooth flex items-center gap-1.5 border-transparent text-slate-500 hover:text-slate-800">
+              <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="5" height="5" x="3" y="3" rx="1"/><rect width="5" height="5" x="16" y="3" rx="1"/><rect width="5" height="5" x="3" y="16" rx="1"/><path d="M21 16h-3a2 2 0 0 0-2 2v3"/><path d="M21 21v.01"/><path d="M12 7v3a2 2 0 0 1-2 2H7"/><path d="M3 12h.01"/><path d="M12 3h.01"/><path d="M12 16v.01"/><path d="M16 12h1"/><path d="M21 12v.01"/><path d="M12 21v-1"/></svg>
+              <span data-i18n="modal.tabScan">Scan to download</span>
+              <span class="caption-5 bg-slate-100 text-slate-700 font-semibold px-1.5 py-0.5 rounded">QR</span>
+            </button>
+
+            <button type="button" data-modal-tab="guide" class="py-3 px-3 border-b-2 transition-smooth flex items-center gap-1.5 border-transparent text-slate-500 hover:text-slate-800">
+              <span data-i18n="modal.tabGuide">Installation guide</span>
+            </button>
+          </div>
+
+          <!-- Tab 1: Direct Download -->
+          <div data-modal-panel="download" class="p-6 space-y-5">
+            <!-- Desktop Helper Banner -->
+            <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200 flex items-center justify-between gap-3">
+              <div class="flex items-center gap-2.5">
+                <div class="flex h-8 w-8 items-center justify-center rounded-lg bg-amber-400 text-slate-950 shrink-0">
+                  <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="5" height="5" x="3" y="3" rx="1"/><rect width="5" height="5" x="16" y="3" rx="1"/><rect width="5" height="5" x="3" y="16" rx="1"/><path d="M21 16h-3a2 2 0 0 0-2 2v3"/><path d="M21 21v.01"/><path d="M12 7v3a2 2 0 0 1-2 2H7"/><path d="M3 12h.01"/><path d="M12 3h.01"/><path d="M12 16v.01"/><path d="M16 12h1"/><path d="M21 12v.01"/><path d="M12 21v-1"/></svg>
+                </div>
+                <div>
+                  <div class="caption-3 text-slate-900" data-i18n="modal.desktopNoticeTitle">Browsing on computer?</div>
+                  <div class="caption-5 text-slate-600" data-i18n="modal.desktopNoticeDesc">Scan QR with your phone camera to download directly to Android.</div>
+                </div>
+              </div>
+              <button
+                type="button"
+                data-switch-modal-tab="qr"
+                data-i18n="modal.scanQrBtn"
+                class="button-xsm py-1.5 px-3 rounded-lg bg-white border border-slate-200 text-slate-800 hover:bg-slate-100 transition-color-smooth whitespace-nowrap shadow-xs"
+              >
+                Scan QR
+              </button>
+            </div>
+
+            <!-- Version Selector -->
+            <div>
+              <label class="block caption-3 uppercase tracking-wider text-slate-600 mb-2" data-i18n="modal.selectBuildLabel">
+                Select Android package build
+              </label>
+              <div class="grid grid-cols-2 gap-3">
+                <button type="button" data-version-btn="2.4.0" class="p-3 rounded-2xl border text-left transition-smooth border-slate-900 bg-slate-50 ring-1 ring-slate-900">
+                  <div class="flex items-center justify-between mb-1">
+                    <span class="title-4 font-bold text-slate-900">v2.4.0</span>
+                    <span class="caption-5 font-bold text-slate-800 bg-slate-200 px-2 py-0.5 rounded-full">Latest</span>
+                  </div>
+                  <div class="caption-4 text-slate-500 tabular-nums">29.3 MB · November 2026</div>
+                  <div class="caption-5 text-slate-600 mt-1 truncate">Android 8.0+ </div>
+                </button>
+
+                <button type="button" data-version-btn="2.3.8" class="p-3 rounded-2xl border text-left transition-smooth border-slate-200 hover:border-slate-300 bg-white">
+                  <div class="flex items-center justify-between mb-1">
+                    <span class="title-4 font-bold text-slate-900">v2.3.8</span>
+                  </div>
+                  <div class="caption-4 text-slate-500 tabular-nums">17.9 MB · January 2026</div>
+                  <div class="caption-5 text-slate-600 mt-1 truncate">Android 7.0+ </div>
+                </button>
+              </div>
+            </div>
+
+            <!-- Checksum Badge -->
+            <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200 text-xs">
+              <div class="flex items-center justify-between mb-1.5">
+                <div class="flex items-center gap-1.5 caption-3 text-slate-800">
+                  <svg class="h-4 w-4 text-emerald-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+                  <span data-i18n="modal.checksumTitle">Package checksum verification</span>
+                </div>
+                <button
+                  id="modal-copy-hash"
+                  type="button"
+                  class="flex items-center gap-1 caption-4 font-semibold text-slate-800 hover:underline"
+                >
+                  <span id="copy-hash-default" class="flex items-center gap-1">
+                    <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+                    <span data-i18n="modal.copyHashBtn">Copy hash</span>
+                  </span>
+                  <span id="copy-hash-copied" class="hidden items-center gap-1">
+                    <svg class="h-3.5 w-3.5 text-emerald-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                    <span class="text-emerald-700" data-i18n="modal.copiedText">Copied</span>
+                  </span>
+                </button>
+              </div>
+              <div id="modal-sha256" class="font-mono text-[11px] text-slate-600 break-all bg-white p-2 rounded-lg border border-slate-200 tabular-nums">
+                a5793cb9209cb650678a543562c43c9caf45514121a621d7002fcb40bccad11c
+              </div>
+              <p class="mt-1.5 caption-5 text-slate-500" data-i18n="modal.verifiedNote">
+                Verified zero modifications. Matches the signed production build.
+              </p>
+            </div>
+
+            <!-- What's New -->
+            <div class="space-y-1 caption-4 text-slate-600">
+              <div class="caption-3 text-slate-800 mb-1" data-i18n="modal.detailsLabel">Package details:</div>
+              <div id="modal-changelog" class="space-y-1"></div>
+            </div>
+
+            <!-- Download Button & Non-intrusive Counter -->
+            <div>
+              <div id="modal-download-progress" class="hidden w-full p-4 rounded-2xl bg-slate-50 border border-slate-200 text-center">
+                <div class="flex items-center justify-between caption-3 text-slate-900 mb-2">
+                  <span id="modal-progress-filename">Downloading Rewardzen.apk...</span>
+                  <span id="modal-progress-pct">10%</span>
+                </div>
+                <div class="w-full bg-slate-200 rounded-full h-2 overflow-hidden">
+                  <div id="modal-progress-bar" class="bg-slate-900 h-full transition-smooth" style="width: 10%"></div>
+                </div>
+                <p id="modal-progress-note" class="caption-5 text-slate-600 mt-2">Allocating package payload...</p>
+              </div>
+
+              <div id="modal-download-idle" class="space-y-2">
+                <button
+                  id="modal-start-download-btn"
+                  type="button"
+                  class="button-md w-full py-3.5 px-6 rounded-xl bg-slate-900 text-white hover:bg-slate-800 transition-smooth flex items-center justify-center gap-2 active:scale-98 shadow-xs"
+                >
+                  <svg class="h-4 w-4 text-amber-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+                  <span id="modal-start-download-label">Start direct download (29.3 MB)</span>
+                </button>
+
+                <!-- Social Proof Counter -->
+                <div class="flex items-center justify-center gap-1.5 caption-4 text-slate-500">
+                  <svg class="h-3.5 w-3.5 text-emerald-600 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+                  <span class="font-semibold text-slate-800 tabular-nums">1,200+</span>
+                  <span data-i18n="modal.activeDownloadsToday">active downloads today</span>
+                  <span aria-hidden="true" class="text-slate-300">·</span>
+                  <span class="caption-5 text-slate-400" data-i18n="modal.verifiedSafeText">Verified safe</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between caption-5 text-slate-500 pt-1 border-t border-slate-100">
+              <span class="flex items-center gap-1">
+                <svg class="h-3.5 w-3.5 text-emerald-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                <span data-i18n="modal.playProtectText">Google Play Protect safe</span>
+              </span>
+              <span data-i18n="modal.targetAndroidText">Target Android 14</span>
+            </div>
+          </div>
+
+          <!-- Tab 2: Scan to Download with Dynamic QR Code -->
+          <div data-modal-panel="qr" class="hidden p-6 space-y-5">
+            <!-- Version Switcher -->
+            <div class="flex items-center justify-between p-1.5 bg-slate-100 rounded-xl border border-slate-200 caption-4">
+              <span class="font-semibold text-slate-700 pl-2"><span data-i18n="modal.selectBuildLabel">Select Android package build</span>:</span>
+              <div class="flex items-center gap-1">
+                <button type="button" data-qr-version-btn="2.4.0" class="py-1 px-3 rounded-lg transition-smooth bg-slate-900 text-white font-semibold shadow-xs">v2.4.0 (Latest)</button>
+                <button type="button" data-qr-version-btn="2.3.8" class="py-1 px-3 rounded-lg transition-smooth text-slate-600 hover:text-slate-900">v2.3.8</button>
+              </div>
+            </div>
+
+            <!-- Dynamic QR Code Card -->
+            <div class="flex flex-col sm:flex-row items-center gap-6 p-5 rounded-2xl bg-slate-50 border border-slate-200">
+              <!-- QR Image -->
+              <div class="relative shrink-0 flex items-center justify-center p-3 rounded-2xl bg-white border border-slate-200 shadow-xs">
+                <div class="relative">
+                  <img
+                    id="modal-qr-img"
+                    src=""
+                    alt="QR Code to Download Rewardzen"
+                    class="w-44 h-44 rounded-lg object-contain"
+                  />
+                  <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                    <img
+                      src="./logo_cec7fe47.jpg"
+                      alt="Rewardzen"
+                      class="h-8 w-8 rounded-lg object-cover ring-2 ring-white shadow-md"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Instructions -->
+              <div class="space-y-3 text-left">
+                <div>
+                  <div class="inline-flex items-center gap-1.5 caption-4 uppercase tracking-wider text-slate-700 bg-white border border-slate-200 px-2 py-0.5 rounded-md mb-1">
+                    <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg>
+                    <span>Scan with any camera app</span>
+                  </div>
+                  <h4 class="title-3 font-bold text-slate-900" data-i18n="modal.scanHeaderTitle">
+                    Instant install on mobile
+                  </h4>
+                  <p class="body-6 text-slate-600 mt-1" data-i18n="modal.scanHeaderSub">
+                    Point your camera or Google Lens at this code to open the package download directly on your phone.
+                  </p>
+                </div>
+
+                <div class="pt-2 border-t border-slate-200 space-y-1.5 caption-4 text-slate-600">
+                  <div class="flex items-center gap-2">
+                    <svg class="h-3.5 w-3.5 text-emerald-600 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                    <span>Package: <strong id="modal-qr-package">Rewardzen.apk</strong></span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <svg class="h-3.5 w-3.5 text-emerald-600 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+                    <span><strong>1,200+</strong> <span data-i18n="modal.activeDownloadsToday">active downloads today</span></span>
+                  </div>
+                </div>
+
+                <div class="flex items-center gap-2 pt-1">
+                  <button
+                    id="modal-save-qr"
+                    type="button"
+                    data-i18n="modal.saveQrBtn"
+                    class="button-sm py-1.5 px-3 rounded-lg border border-slate-200 bg-white text-slate-700 hover:bg-slate-100 transition-color-smooth shadow-xs"
+                  >
+                    Save QR image
+                  </button>
+                  <button
+                    id="modal-copy-link"
+                    type="button"
+                    class="button-sm py-1.5 px-3 rounded-lg bg-slate-900 text-white hover:bg-slate-800 transition-color-smooth shadow-xs flex items-center gap-1"
+                  >
+                    <span id="copy-link-default" class="flex items-center gap-1">
+                      <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+                      <span data-i18n="modal.copyLinkBtn">Copy link</span>
+                    </span>
+                    <span id="copy-link-done" class="hidden items-center gap-1">
+                      <svg class="h-3 w-3 text-amber-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                      <span data-i18n="modal.linkCopiedText">Link copied</span>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- URL Display -->
+            <div class="p-3 rounded-xl bg-white border border-slate-200 caption-5 flex items-center justify-between gap-2">
+              <div class="truncate font-mono text-slate-600">
+                <span class="text-slate-400">URL: </span>
+                <span id="modal-qr-url">https://rewardzen.app/?download=2.4.0&amp;auto=true</span>
+              </div>
+              <a
+                id="modal-qr-test-link"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="shrink-0 text-slate-900 font-bold hover:underline flex items-center gap-1"
+              >
+                <span>Test link</span>
+                <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+              </a>
+            </div>
+
+            <button
+              type="button"
+              data-switch-modal-tab="download"
+              data-i18n="modal.switchDirectBtn"
+              class="button-sm w-full py-2.5 px-3 rounded-lg bg-slate-100 text-slate-800 hover:bg-slate-200 transition-color-smooth text-center"
+            >
+              Switch to direct file download
+            </button>
+          </div>
+
+          <!-- Tab 3: Installation Guide -->
+          <div data-modal-panel="guide" class="hidden p-6 space-y-4">
+            <div class="caption-3 text-slate-600 mb-3">
+              Installing an APK outside Google Play is standard on Android. Follow these three steps:
+            </div>
+
+            <div class="space-y-3">
+              <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200 flex items-start gap-3">
+                <span class="flex h-6 w-6 items-center justify-center rounded-full bg-slate-900 text-white font-bold caption-4 shrink-0">1</span>
+                <div>
+                  <h4 class="title-4 font-bold text-slate-900">Download the file or scan QR</h4>
+                  <p class="body-6 text-slate-600 mt-0.5">
+                    Tap Download APK. If Chrome asks for confirmation, select Download anyway.
+                  </p>
+                </div>
+              </div>
+
+              <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200 flex items-start gap-3">
+                <span class="flex h-6 w-6 items-center justify-center rounded-full bg-slate-900 text-white font-bold caption-4 shrink-0">2</span>
+                <div>
+                  <h4 class="title-4 font-bold text-slate-900">Allow installation from browser</h4>
+                  <p class="body-6 text-slate-600 mt-0.5">
+                    Open the file. If prompted by system settings, toggle Allow from this source for Chrome.
+                  </p>
+                </div>
+              </div>
+
+              <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200 flex items-start gap-3">
+                <span class="flex h-6 w-6 items-center justify-center rounded-full bg-slate-900 text-white font-bold caption-4 shrink-0">3</span>
+                <div>
+                  <h4 class="title-4 font-bold text-slate-900">Install and sign in with OTP</h4>
+                  <p class="body-6 text-slate-600 mt-0.5">
+                    Tap Install and launch Rewardzen. Enter your ten digit phone number for instant login.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <button
+              type="button"
+              data-switch-modal-tab="download"
+              class="button-sm w-full mt-4 py-2.5 px-3 rounded-lg bg-slate-900 text-white hover:bg-slate-800 transition-color-smooth"
+            >
+              Return to download
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===================================================================
+           14. FLOATING QUICK DOWNLOAD PILL
+           =================================================================== -->
+      <div class="fixed bottom-5 right-5 z-40 sm:bottom-6 sm:right-6">
+        <button
+          type="button"
+          data-open-download="download"
+          class="button-sm flex items-center gap-2 py-2.5 px-4 rounded-full bg-slate-900 text-white shadow-lg hover:bg-slate-800 transition-smooth active:scale-95 border border-slate-700"
+          aria-label="Download Rewardzen APK"
+        >
+          <div class="flex h-5 w-5 items-center justify-center rounded-full bg-amber-400 text-slate-950 font-bold text-xs">
+            <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+          </div>
+          <span class="title-5 font-bold tracking-tight text-white">Download APK</span>
+        </button>
+      </div>
+
+    </div>
+  </body>
+</html>

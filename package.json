@@ -1,0 +1,10 @@
+{
+  "name": "rewardzen",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "python3 -m http.server 3000 --bind 0.0.0.0",
+    "build": "true",
+    "lint": "true"
+  }
+}
